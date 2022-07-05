@@ -351,7 +351,7 @@ void retain__clean(struct mosquitto__retainhier **retainhier)
 	}
 }
 
-static int buffer_add_msg(struct mosquitto_msg_store *retained, struct mosquitto_message **buffer, size_t buffer_size, int *index)
+static int buffer_add_msg(struct mosquitto_base_msg *retained, struct mosquitto_message **buffer, size_t buffer_size, int *index)
 {
 
 	if (*index >= buffer_size)
